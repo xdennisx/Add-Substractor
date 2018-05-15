@@ -29,4 +29,4 @@ With 80000 dataset size
 | Achieve 0.99 acc at epoch | 78 | 98 | can't achieve(run 150 epoch) |
 | Time of achieve 0.99 acc(if higher) | 1405 | 1360 | - |
 
-So, I choose data size with 80000, batch size with 128 and epoch with 100
+So, I choose data size with 80000, batch size with 256 and epoch with 100
