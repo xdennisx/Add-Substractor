@@ -19,7 +19,7 @@ With 70000 dataset size
 
 | batch size | 64 | 128 | 256 | 512 |
 |:----------:|:--:|:---:|:---:|:---:|
-| Achieve 0.99 acc at epoch | 100 | 100 | can't achieve | can't achieve |
+| Achieve 0.99 acc at epoch | 100 | 100 | can't achieve | can't achieve(run 200 epoch) |
 | Time of achieve 0.99 acc(if higher) | 2594 | 1713 | - | - |
 
 So, I think batch size is perfect with 128
