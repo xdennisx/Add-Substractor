@@ -36,3 +36,8 @@ So, I choose data size with 80000, batch size with 256 and epoch with 100
 | Digits | 4 |
 |:------:|:-:|
 | accuracy | 0.9250 |
+
+# Use saved model
+```python
+python3 main.py
+```
