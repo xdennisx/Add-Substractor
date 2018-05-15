@@ -30,3 +30,9 @@ With 80000 dataset size
 | Time of achieve 0.99 acc(if higher) | 1405 | 1360 | - |
 
 So, I choose data size with 80000, batch size with 256 and epoch with 100
+
+- multi-digits accuracy
+
+| Digits | 4 |
+|:------:|:-:|
+| accuracy | 0.9250 |
