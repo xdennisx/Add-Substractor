@@ -8,6 +8,7 @@ Created on Mon May 14 23:14:49 2018
 import numpy as np
 from keras.models import Sequential
 from keras import layers
+import time
 import util
 
 utils = util.Util()
@@ -36,6 +37,7 @@ x_train, y_train = vectorization(train_x, train_y, utils.MAXLEN, utils.DIGITS + 
 x_val, y_val = vectorization(val_x, val_y, utils.MAXLEN, utils.DIGITS + 1)
 
 print('Build model...')
+time1 = time.time()
 model = Sequential()
 model.add(utils.RNN(utils.HIDDEN_SIZE, input_shape=(utils.MAXLEN, len(utils.chars))))
 model.add(layers.RepeatVector(utils.DIGITS + 1))
@@ -56,6 +58,7 @@ model.fit(x_train, y_train,
           batch_size=utils.BATCH_SIZE,
           epochs=100,
           validation_data=(x_val, y_val))
+print(time.time() - time1)
 for i in range(10):
     ind = np.random.randint(0, len(x_val))
     rowx, rowy = x_val[np.array([ind])], y_val[np.array([ind])]
@@ -70,3 +73,5 @@ for i in range(10):
     else:
         print(colors.fail + '☒' + colors.close, end=' ')
     print(guess)
+model.save("my_model.h5")
+del model

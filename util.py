@@ -16,7 +16,7 @@ class Util():
         self.chars = '0123456789+- '
         self.RNN = layers.LSTM
         self.HIDDEN_SIZE = 128
-        self.BATCH_SIZE = 128
+        self.BATCH_SIZE = 256
         self.LAYERS = 1
         
 class CharacterTable(object):
